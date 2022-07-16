@@ -31,3 +31,34 @@ docker run -d --hostname my-rabbit --name some-rabbit -p 15671:15671 -p 15672:15
         }
     );
 ```
+
+# 发布订阅模式介绍
+
+## 订阅模型
+
+订阅模型借助一个新的概念：Exchange（交换机）实现，不同的订阅模型本质上是根据交换机(Exchange)的类型划分的。
+
+订阅模型有三种：
++ Fanout（广播模型）: 将消息发送给绑定给交换机的所有队列(因为他们使用的是同一个RoutingKey)。
++ Direct（定向）: 把消息发送给拥有指定Routing Key (路由键)的队列。
++ Topic（通配符）: 把消息传递给拥有 符合Routing Patten(路由模式)的队列。
+
+### 订阅之Fanout模型
+
+![fanout](./docs/images/pub-sub-fanout.png)
+
+这个模型的特点就是它在发送消息的时候，并没有指明`RoutingKey` ，或者说他指定了`RoutingKey`，但是所有的消费者都知道，大家都能接收到消息,就像听广播。
+
+### 订阅之Direct模型
+
+![direct](./docs/images/pub-sub-direct.png)
+
+和Fanout模型相似。不同时发送方指定了`RoutingKey`。同时，队列也指定了和`RoutingKey`一样的`BindingKey`。接收者在此队列即可接收到对应消息。
+
+### 订阅之Topic模型
+
+![topic](./docs/images/pub-sub-topic.png)
+
+topic模型和direc模型相似。
+
+**区别：Topic模型的队列的`BindingKey`支持正则表达式。**
