@@ -11,6 +11,8 @@ import lombok.extern.slf4j.Slf4j;
  * https://www.rabbitmq.com/tutorials/tutorial-one-java.html
  * <p>
  * https://www.hxstrive.com/subject/rabbitmq/1051.htm
+ * <p>
+ * https://www.cnblogs.com/ZhuChangwu/p/14093107.html#rabbitmq%E7%9A%84%E4%BA%94%E7%A7%8D%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9E%8B
  *
  * @author wangjin
  * @date 2021/12/18
