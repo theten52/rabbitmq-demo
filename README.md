@@ -64,3 +64,7 @@ topic模型和direc模型相似。
 **区别：Topic模型的队列的`BindingKey`支持正则表达式。**
 
 参考链接：[Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html)
+
+# RPC 模式介绍
+
+参考链接：[Request-Reply](https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html)
