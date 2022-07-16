@@ -9,12 +9,20 @@ import lombok.extern.slf4j.Slf4j;
 import java.nio.charset.StandardCharsets;
 
 /**
+ * 官网教程第二篇：Worker。
+ * <p>
+ * https://www.rabbitmq.com/tutorials/tutorial-two-java.html
+ * <p>
+ * https://www.hxstrive.com/subject/rabbitmq/1051.htm
+ * <p>
+ * https://www.cnblogs.com/ZhuChangwu/p/14093107.html#rabbitmq%E7%9A%84%E4%BA%94%E7%A7%8D%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9E%8B
+ *
  * @author wangjin
  */
 @Slf4j
-public class NewTask {
+public class A2NewTask {
 
-    private static final String TASK_QUEUE_NAME = "task_queue";
+    private static final String TASK_QUEUE_NAME = "tut2.task_queue";
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();

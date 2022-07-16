@@ -12,9 +12,9 @@ import java.nio.charset.StandardCharsets;
  * @author wangjin
  */
 @Slf4j
-public class Worker {
+public class A2Worker {
 
-    private static final String TASK_QUEUE_NAME = "task_queue";
+    private static final String TASK_QUEUE_NAME = "tut2.task_queue";
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
